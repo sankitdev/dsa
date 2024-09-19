@@ -61,3 +61,12 @@ function secondLargest(arr) {
 function evenNum(arr) {
   return arr.filter((item) => item % 2 === 0);
 }
+
+// Find the Sum of Elements at Even Indices
+function sumAtEvenIndices(arr){
+ return arr.filter((_,index)=> index % 2 ===0)
+  .reduce((curr,total)=>curr+total,0)
+}
+
+
+
