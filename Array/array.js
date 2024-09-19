@@ -63,10 +63,18 @@ function evenNum(arr) {
 }
 
 // Find the Sum of Elements at Even Indices
-function sumAtEvenIndices(arr){
- return arr.filter((_,index)=> index % 2 ===0)
-  .reduce((curr,total)=>curr+total,0)
+function sumAtEvenIndices(arr) {
+  return arr
+    .filter((_, index) => index % 2 === 0)
+    .reduce((curr, total) => curr + total, 0);
 }
 
+// Rotate an Array by K Positions
+function rotateArr(arr, k) {
+  k = k % arr.length; //check if the k value is grater than arr length
+  const endPart = arr.slice(-k);
+  const startPart = arr.slice(0, arr.length - 1);
+  return [...endPart, ...startPart];
+}
 
-
+console.log(rotateArr([1, 2, 3, 4, 5, 5, 6], 9));
